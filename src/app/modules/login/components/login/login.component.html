@@ -1,0 +1,22 @@
+<div *ngIf="loader" class="container">
+  <div class="box">
+    <div class="loader6"></div>
+  </div>
+</div>
+<div class="auth">
+  <div class="box-center">
+    <form class="body-authorization__forms" name="form" (ngSubmit)="onSubmit()" #f="ngForm">
+      <div class="input-login">
+        <input name="username" [(ngModel)]="form.login" class="input-auth" type="text" placeholder="Login">
+      </div>
+      <div class="input-password">
+        <input #inputElement name="password" [(ngModel)]="form.password" class="input-auth" type="password"
+               placeholder="Password">
+        <div class="password-eye" (click)="showPassword()"></div>
+      </div>
+      <button class="but-auth" [disabled]="f.form.invalid">ВОЙТИ</button>
+      <div *ngIf="f.submitted && isLoginFailed">notification</div>
+    </form>
+  </div>
+</div>
+

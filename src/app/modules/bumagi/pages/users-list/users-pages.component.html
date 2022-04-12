@@ -1,0 +1,12 @@
+<div class="users-page">
+  <app-menu (onClickAll)="clickAll($event)" (onClickBlock)="clickBlock($event)"
+            (onClickActive)="clickActive($event)"></app-menu>
+  <app-list-users [users]="users" [loader]="loader" [idStatus]="idStatus"
+                  (onUpdateUser)="clickUpdateUser($event)"></app-list-users>
+</div>
+
+
+
+
+
+

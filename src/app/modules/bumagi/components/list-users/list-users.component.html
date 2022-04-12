@@ -1,0 +1,28 @@
+<div *ngIf="loader" class="container">
+  <div class="box">
+    <div class="loader6"></div>
+  </div>
+</div>
+<div class="wrapper">
+  <ul class="user-list" *ngIf="!loader">
+    <li *ngFor="let user of users" class="user-item"
+        (click)="updateUser(user.id,user.fname,user.name,user.mname,user.status)">
+      <div class="float-block avatar"><img src="assets/img/avatar.jpg"></div>
+      <div class="padding-top float-block">
+        <span class="person-fio">{{user.fname}} {{user.name | slice: 0:1}}. {{user.mname | slice: 0:1}}.</span>
+        <span class="balans">Баланс: <span>{{user.balance | number:'1.1-2'}}</span></span>
+      </div>
+      <div class="right-block inline-element right-pad-top">
+          <span
+            class="update-user">Последнее изменение: <span>{{user.lastUpdatedAt | date:'dd.MM.yyyy HH:mm:ss':'ru'}}</span></span>
+        <span class="status">Подписка {{user.status | statusText }}</span>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+

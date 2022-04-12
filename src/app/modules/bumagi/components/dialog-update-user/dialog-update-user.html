@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>Иванов Иван
+  <span mat-raised-button mat-dialog-close class="close"></span></h1>
+<div mat-dialog-content>
+  <form [formGroup]="updForm" (ngSubmit)="saveUser()" class="user__forms">
+    <div class="input-fam input-left">
+      <input class="fam input-form" type="text" formControlName="fam">
+    </div>
+    <div class="input-ima input-left">
+      <input class="input-form" type="text" formControlName="ima">
+    </div>
+    <div class="input-oth input-left">
+      <input class="input-form" type="text" formControlName="oth">
+    </div>
+    <div class="clear-float"></div>
+    <div class="select-status">
+      <select formControlName="status">
+        <option *ngFor="let tip of tipSelect" [value]="tip.value">{{tip.name}}</option>
+      </select>
+    </div>
+    <footer class="sticky-modal-footer but-right">
+      <button class="but-form" type="submit">Сохранить</button>
+    </footer>
+  </form>
+</div>
+
+
+
+
+

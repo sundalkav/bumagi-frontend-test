@@ -1,1 +1,158 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/Inter-Regular.ttf');
+}
+html, body { background: #FFFFFF; margin: 0;}
+ul, li { margin: 0;}
+body { margin: 0; font-family: 'Inter', sans-serif !important; }
+input { font-family: 'Inter', sans-serif; }
+input:focus { outline: none; }
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+
+
+.container{
+  text-align: center;
+  background-color: #F7F7F7;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.box:nth-child(2n-1){
+  background-color: rgba(0,0,0,0.05);
+}
+
+.box{
+  display: inline-block;
+  height: 100vh;
+  width: 100%;
+  float:left;
+  position: relative;
+  transition: all .2s ease;
+}
+
+
+
+.box p{
+  color: #777;
+  font-family:  Lato,"Helvetica Neue" ;
+  font-weight: 300;
+  position: absolute;
+  font-size: 20px;
+  width: 100%;
+  height: 25px;
+  text-align: center;
+  bottom: 0px;
+  margin: 0;
+  top:160px;
+  background-color: #fff;
+  opacity: 0;
+  text-transform: uppercase;
+  transition: all .2s ease;
+}
+
+.box:hover p{
+  bottom:0px;
+  top:175px;
+  opacity: 1;
+  transition: all .2s ease;
+  z-index: 2;
+}
+
+
+
+/* MEDIA QUERIES */
+@media (max-width: 700px){
+  .box{
+    width: 50%;
+  }
+
+  .box:nth-child(2n-1){
+    background-color: inherit;
+  }
+
+  .box:nth-child(4n),.box:nth-child(4n-3) {
+    background-color: rgba(0,0,0,0.05);
+  }
+
+}
+
+@media (max-width: 420px){
+  .box{
+    width: 100%;
+  }
+
+  .box:nth-child(4n),.box:nth-child(4n-3){
+    background-color: inherit;
+  }
+
+  .box:nth-child(2n-1){
+    background-color:rgba(0,0,0,0.05);
+  }
+
+}
+
+
+
+
+
+/* -------------- loader6 -------------- */
+
+.loader6{
+  position: relative;
+  width: 12px;
+  height: 12px;
+
+  top: 46%;
+  top: -webkit-calc(50% - 6px);
+  top: calc(50% - 6px);
+  left: 46%;
+  left: -webkit-calc(50% - 6px);
+  left: calc(50% - 6px);
+
+  border-radius: 12px;
+  background-color: #6979F8;
+  -webkit-transform-origin:  50% 50%;
+  transform-origin:  50% 50% ;
+  -webkit-animation: loader6 1s ease-in-out infinite;
+  animation: loader6 1s ease-in-out infinite;
+}
+
+.loader6:before{
+  content: "";
+  position: absolute;
+  background-color: #6979F8;
+  top: 0px;
+  left: -25px;
+  height: 12px;
+  width: 12px;
+  border-radius: 12px;
+  opacity: 0.6
+}
+
+.loader6:after{
+  content: "";
+  position: absolute;
+  background-color: #6979F8;
+  top: 0px;
+  left: 25px;
+  height: 12px;
+  width: 12px;
+  border-radius: 12px;
+  opacity: 0.6;
+}
+
+
+@-webkit-keyframes loader6{
+  0%{-webkit-transform:rotate(0deg);}
+  50%{-webkit-transform:rotate(180deg);}
+  100%{-webkit-transform:rotate(180deg);}
+}
+
+@keyframes loader6{
+  0%{transform:rotate(0deg);}
+  50%{transform:rotate(180deg);}
+  100%{transform:rotate(180deg);}
+}
+

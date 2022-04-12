@@ -1,0 +1,27 @@
+.nav-menu {
+  height: 47px;
+  background: #FFFFFF;
+}
+
+.menu-ul {
+  height: 100%;
+  margin: 0;
+  padding-top: 15px;
+}
+
+.item-li {
+  display: inline;
+  margin-left: 20px;
+  padding: 0 10px 0 10px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  height: 25%;
+  color: #D0C9D6;
+}
+
+.active-li {
+  padding-bottom: 10px;
+  color: #1A051D;
+  border-bottom: 3px solid #6979F8;
+}
